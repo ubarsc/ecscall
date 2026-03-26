@@ -53,7 +53,7 @@ import boto3
 import cloudpickle
 
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 
 def callFunc(userFunc, argTupleList, numWorkers, ecsClusterParams,

@@ -1,0 +1,23 @@
+How to create a release of ecscall.
+You will need the build package installed ("conda install build" or
+"pip install build").
+
+1. Check that the documentation is up-to-date. Run 
+        plainpydoc2md -i ecscall -o .
+        git diff
+   and merge any changes in ecscall.md.
+2. Merge a pull request to update the version number in plainpydoc2md.py
+3. Create the distribution tar.gz using
+        python -m build
+   This creates a tar.gz file under a subdirectory called dist/
+        e.g. ecscall-1.0.0.tar.gz
+4. Go to https://github.com/ubarsc/ecscall/releases, and create
+   a new release by pressing "Draft a new release".
+   You should fill in the following:
+    Tag version: <version number> e.g. 1.0.0
+    Release Title: Version 1.0.0
+    Description: A brief description (a few lines at most) explaining
+                 the key points about this release
+    Upload files: Add the tar.gz file
+    Click "Publish release"
+
