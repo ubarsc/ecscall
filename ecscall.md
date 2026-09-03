@@ -110,7 +110,10 @@
             covering any AWS services your compute workers will need.
         subnet : str
             Required. Subnet ID string associated with the VPC in which
-            workers will run.
+            workers will run. Note that AWS charges for traffic between
+            availability zones so it is preferable to have this subnet
+            in the same AZ as the main script (ideally the same subnet -
+            this can be obtained by querying the EC2 Instance Metadata).
         securityGroups : list of str
             Required. List of security group IDs associated with the VPC.
         cpu : str
